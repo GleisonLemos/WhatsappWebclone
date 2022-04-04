@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300,400,500,600,700&display=swap');
+
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:linear-gradient(#506185 0%, #009688 130px, #628a8d 130px, #d9dbd5 100%); 
+}
+
+.container{
+    position: relative;
+    width: 1280px;
+    max-width: 100%;
+    height: calc(100vh - 40px);
+    background: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.06),0 2px 5px 0 rgba(0,0,0,0.06);
+    display: flex;
+}
+
+.container .leftSider{
+    position: relative;
+    flex: 30%;
+    background: rgb(200, 207, 212);    
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+.container .rightSider{
+    position: relative;
+    flex: 70%;
+    background: #cfcfc3;    
+
+}
+
+.container .rightSider::before {
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../imagens/p3.png);
+    opacity: 0.06;
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #ededed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 0 15px;
+}
+
+.userimg{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        
+}
+
+.nav_icons{
+    display: flex;
+}
+
+.nav_icons li{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    color: #51585c;
+    font-size: 1.5em;
+    margin-left: 22px;
+}
+
+.search_chat{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #d9dbd5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.search_chat div {
+    width: 100%;
+}
+
+.search_chat div input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #f1f1eb;
+    padding: 6px;
+    height: 25px;
+    border-radius: 15px;
+    font-size: 14px;
+    padding-left: 40px;
+}
+
+.search_chat div input::placeholder{
+    color: #cfcfc3;
+}
+
+.search_chat div ion-icon{
+    position: absolute;
+    left: 35px;
+    top: 17px;
+    font-size: 1.0em;
+}
+
+.chat_lista {
+    position: relative;
+    height: calc(100% - 110px);
+    overflow-y: auto;
+    background: #73b8b2;
+}
+
+.chat_lista .bloquear{
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    display: flex;    
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.06)        
+}
+
+.chat_lista .bloquear .ativo{
+    background: #51585c;    
+}
+
+.chat_lista .bloquear:hover{
+    background: #628a8d;
+}
+
+.chat_lista .bloquear .imgbl{
+    position: relative;
+    min-width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat_lista .bloquear .detalhe{
+    position: relative;
+    width: 100%;
+}
+
+.chat_lista .bloquear .detalhe .listacontatos{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.chat_lista .bloquear .detalhe .listacontatos h4{
+    font-size: 1.0em;
+    font-weight: 600;
+    color: rgb(46, 45, 45);
+}
+
+.chat_lista .bloquear .detalhe .listacontatos .hora{
+    font-size: 0.85em;
+    color: #51585c;
+}
+
+.chat_lista .bloquear .detalhe .listacontatos .hora{
+    color: #111;
+}
+
+.chat_lista .bloquear.nlida .detalhe .listacontatos .hora{
+    color: rgb(155, 252, 155);
+}
+
+.mensagem_pr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.mensagem_pr p{
+    color: #51585c;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    font-size: 1.0em;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mensagem_pr b{
+    background: #e7ffae;
+    color: #73b8b2;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.74em;
+}
+
+.imgtexto{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.imgtexto h4{
+    font-weight: 400;
+    line-height: 1.2em;
+    margin-left: 12px;
+}
+
+.imgtexto h4 span{
+    font-size: 0.8em; 
+    color: rgb(122, 122, 122);
+    
+}
+
+/*chat caixa*/
+
+.chatCai{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 120px);
+    padding: 50px;
+    overflow-y: auto;
+}
+
+.mensagem{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.mensagem p{
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    padding: 12px;
+    background: #88e7de;
+    border-radius: 10px;
+    font-size: 0.9em;
+}
+
+.mensagem span{
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    opacity: 0,5;
+}
+
+.mi_mensagem{
+    justify-content: flex-end;
+
+}
+
+.ami_mensagem{
+    justify-content: flex-start;    
+}
+
+.ami_mensagem p{
+    background: #73b8b2; 
+    
+}
+
+.chatcaixa_conversa{
+    position: relative;
+    width: 100%;    
+    height: 60px;
+    background: #a0a097;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.chatcaixa_conversa ion-icon{
+    cursor: pointer;
+    font-size: 1.4em;
+    color: #506185;
+}
+
+.chatcaixa_conversa input{
+    position: relative;
+    width: 88%;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1em;
+}
+
+
+/*Gleison lemos rocha - 16019008*/
